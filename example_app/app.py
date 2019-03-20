@@ -26,7 +26,7 @@ class Room(object):
 
 class MainHandler(RequestHandler):
     def get(self):
-        room = str(uuid.uuid4().get_hex().upper()[0:6])
+        room = str(uuid.uuid4().hex.upper()[0:6])
         self. redirect('/room/'+room)
 
 
